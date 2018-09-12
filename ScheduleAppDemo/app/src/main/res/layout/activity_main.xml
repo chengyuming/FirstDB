@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="top"
+        android:layout_marginBottom="@dimen/offset_title_left"
+        android:layout_marginLeft="@dimen/offset_title_left"
+        android:layout_marginRight="@dimen/offset_title_left"
+        android:layout_marginStart="@dimen/offset_title_left"
+        android:layout_marginTop="@dimen/offset_title_left"
+        android:layout_toLeftOf="@+id/btn_search"
+        android:layout_toStartOf="@+id/btn_search"
+        android:background="@drawable/search_bar_blue"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/search_icon_white" />
+
+        <AutoCompleteTextView
+            android:id="@+id/input_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:background="@color/transparent"
+            android:hint="请输入关键字"
+            android:inputType="text|textAutoComplete"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="45dp"
+        android:layout_marginTop="45dp">
+
+        <com.amap.api.maps2d.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+        />
+
+        <ListView
+            android:id="@+id/list_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_openPOP"
+        android:layout_width="122dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:text="标记目的地"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/ABC"
+        android:layout_width="122dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="122dp"
+        android:text="驾车前往"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/activity_planed"
+        android:layout_width="122dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="244dp"
+
+        android:text="已安排的活动"
+        android:textAlignment="center" />
+
+
+</FrameLayout>
